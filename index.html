@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FixnRent — Premium Furniture Rentals</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Syne:wght@400;500;600;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav id="nav">
+  <div class="nav-logo" onclick="scrollTop()">Fix<span>n</span>Rent</div>
+
+  <ul class="nav-links">
+    <li><a href="#how" class="nav-a">How It Works</a></li>
+    <li><a href="#catalog" class="nav-a">Collection</a></li>
+    <li><a href="#pricing" class="nav-a">Pricing</a></li>
+    <li><a href="#reviews" class="nav-a">Reviews</a></li>
+  </ul>
+
+  <div class="nav-right" id="navRight"></div>
+  <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <a href="#how"      onclick="closeMob()">How It Works</a>
+  <a href="#catalog"  onclick="closeMob()">Collection</a>
+  <a href="#pricing"  onclick="closeMob()">Pricing</a>
+  <a href="#reviews"  onclick="closeMob()">Reviews</a>
+  <div class="mob-actions" id="mobActions"></div>
+</div>
+
+<!-- Notification Dropdown -->
+<div class="ndrop" id="ndrop">
+  <div class="ndrop-hd">
+    <h4>Notifications</h4>
+    <button class="nmra" onclick="markAllRead()">Mark all read</button>
+  </div>
+  <div class="nscroll" id="nlist"></div>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-bg-blob"></div>
+  <div class="hero-dots"></div>
+
+  <div class="hero-left">
+    <div class="hero-tag">Premium Furniture Rentals</div>
+    <h1 class="hero-h1">Your dream space,<br><em>without</em><br>the commitment.</h1>
+    <p class="hero-sub">Designer furniture delivered and assembled in 48 hours. Rent daily, weekly, or monthly — return or keep, always your choice.</p>
+    <div class="hero-ctas">
+      <button class="btn btn-terra btn-lg" onclick="go('catalog')">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Browse Collection
+      </button>
+      <button class="btn btn-outline btn-lg" onclick="openAuth('register')">Get Started Free</button>
+    </div>
+    <div class="hero-trust">
+      <span class="trust-item">Free delivery &amp; setup</span>
+      <span class="trust-item">No long-term lock-in</span>
+      <span class="trust-item">Cancel anytime</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="scene-wrap">
+      <div class="scene-orbit"><div class="odot"></div></div>
+      <div class="scene-orbit"><div class="odot"></div></div>
+      <div class="hero-furniture">
+        <svg width="300" height="260" viewBox="0 0 300 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#d4774a"/><stop offset="100%" stop-color="#7a3c18"/></linearGradient>
+            <linearGradient id="sg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c06838"/><stop offset="100%" stop-color="#5a2c0a"/></linearGradient>
+            <linearGradient id="sg3" x1="0" y1="1" x2="1" y2="0"><stop offset="0%" stop-color="#3a2010"/><stop offset="100%" stop-color="#7a4820"/></linearGradient>
+          </defs>
+          <!-- shadow -->
+          <ellipse cx="150" cy="248" rx="108" ry="11" fill="rgba(31,58,95,.18)"/>
+          <!-- legs -->
+          <rect x="50" y="210" width="12" height="35" rx="4" fill="url(#sg3)"/>
+          <rect x="238" y="210" width="12" height="35" rx="4" fill="url(#sg3)"/>
+          <rect x="64" y="214" width="10" height="30" rx="3" fill="url(#sg3)"/>
+          <rect x="226" y="214" width="10" height="30" rx="3" fill="url(#sg3)"/>
+          <!-- seat base -->
+          <rect x="34" y="178" width="232" height="42" rx="9" fill="url(#sg2)"/>
+          <!-- seat cushions -->
+          <rect x="42" y="167" width="100" height="30" rx="7" fill="url(#sg1)"/>
+          <rect x="158" y="167" width="100" height="30" rx="7" fill="url(#sg1)"/>
+          <!-- cushion seam -->
+          <line x1="150" y1="167" x2="150" y2="197" stroke="rgba(0,0,0,.18)" stroke-width="1.5"/>
+          <!-- back frame -->
+          <rect x="32" y="105" width="236" height="76" rx="10" fill="url(#sg2)" opacity=".88"/>
+          <!-- back cushions -->
+          <rect x="42" y="111" width="100" height="66" rx="7" fill="url(#sg1)"/>
+          <rect x="158" y="111" width="100" height="66" rx="7" fill="url(#sg1)"/>
+          <!-- armrests -->
+          <rect x="14" y="136" width="32" height="76" rx="9" fill="url(#sg2)"/>
+          <rect x="254" y="136" width="32" height="76" rx="9" fill="url(#sg2)"/>
+          <!-- armrest tops -->
+          <ellipse cx="30" cy="135" rx="18" ry="10" fill="url(#sg1)"/>
+          <ellipse cx="270" cy="135" rx="18" ry="10" fill="url(#sg1)"/>
+          <!-- highlights -->
+          <rect x="50" y="115" width="44" height="6" rx="3" fill="rgba(255,255,255,.16)"/>
+          <rect x="166" y="115" width="44" height="6" rx="3" fill="rgba(255,255,255,.16)"/>
+          <rect x="50" y="171" width="34" height="5" rx="2.5" fill="rgba(255,255,255,.13)"/>
+          <rect x="166" y="171" width="34" height="5" rx="2.5" fill="rgba(255,255,255,.13)"/>
+        </svg>
+      </div>
+      <!-- floating info cards -->
+      <div class="hero-card hero-card-1">
+        <div class="hcard-title">🚚 Free Delivery</div>
+        <div class="hcard-sub">Assembled in 48h</div>
+      </div>
+      <div class="hero-card hero-card-2">
+        <div class="hcard-title">✦ 500+ Pieces</div>
+        <div class="hcard-sub">From ₹199/day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<div class="stats-row">
+  <div class="stat"><div class="stat-n">500+</div><div class="stat-l">Pieces Available</div></div>
+  <div class="stat"><div class="stat-n">14K+</div><div class="stat-l">Happy Renters</div></div>
+  <div class="stat"><div class="stat-n">48H</div><div class="stat-l">Delivery Time</div></div>
+  <div class="stat"><div class="stat-n">4.9★</div><div class="stat-l">Customer Rating</div></div>
+  <div class="stat"><div class="stat-n">50+</div><div class="stat-l">Cities Covered</div></div>
+</div>
+
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section class="sec" id="how">
+  <div class="sec-tag">The Process</div>
+  <h2 class="sec-h2">Four steps to a<br><em>transformed</em> space</h2>
+  <p class="sec-sub">We handle everything — from choosing to delivery to return. You just enjoy the space.</p>
+  <div class="steps">
+    <div class="step reveal"><div class="step-n">STEP 01</div><span class="step-icon">🪑</span><h3 class="step-title">Browse Freely</h3><p class="step-desc">Explore 500+ designer pieces without signing up. Filter by category, style, or price.</p></div>
+    <div class="step reveal"><div class="step-n">STEP 02</div><span class="step-icon">📅</span><h3 class="step-title">Pick Your Duration</h3><p class="step-desc">Daily, weekly, or monthly plans — or use the custom slider to choose any duration up to 90 days.</p></div>
+    <div class="step reveal"><div class="step-n">STEP 03</div><span class="step-icon">🚚</span><h3 class="step-title">White-Glove Delivery</h3><p class="step-desc">We deliver, assemble, and place everything within 48 hours. Not a single screw left for you.</p></div>
+    <div class="step reveal"><div class="step-n">STEP 04</div><span class="step-icon">🔔</span><h3 class="step-title">Extend or Return</h3><p class="step-desc">Reminders before your rental ends. Extend in one click, or we'll schedule a free pickup.</p></div>
+  </div>
+</section>
+
+<!-- ══════════ CATALOG ══════════ -->
+<section class="sec sec-alt" id="catalog">
+  <div class="sec-tag">Our Collection</div>
+  <h2 class="sec-h2">Designer pieces,<br><em>curated</em> for you</h2>
+  <p class="sec-sub">Every piece is sourced from leading designers, maintained to showroom standard, and photographed accurately.</p>
+
+  <div class="catalog-top">
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="sInput" placeholder="Search by name, style…" oninput="renderProducts()">
+    </div>
+    <select class="sort-sel" id="sortSel" onchange="renderProducts()">
+      <option value="">Sort: Featured</option>
+      <option value="pa">Price: Low → High</option>
+      <option value="pd">Price: High → Low</option>
+      <option value="na">Name: A → Z</option>
+    </select>
+  </div>
+
+  <div class="chips" id="chips">
+    <button class="chip on" onclick="setCat('All',this)">All Pieces</button>
+    <button class="chip" onclick="setCat('Sofa',this)">Sofas</button>
+    <button class="chip" onclick="setCat('Chair',this)">Chairs</button>
+    <button class="chip" onclick="setCat('Table',this)">Tables</button>
+    <button class="chip" onclick="setCat('Bed',this)">Beds</button>
+    <button class="chip" onclick="setCat('Shelf',this)">Shelving</button>
+    <button class="chip" onclick="setCat('Lamp',this)">Lighting</button>
+  </div>
+
+  <div class="pgrid" id="pgrid"></div>
+</section>
+
+<!-- ══════════ PRICING ══════════ -->
+<section class="sec" id="pricing">
+  <div style="max-width:560px">
+    <div class="sec-tag">Pricing</div>
+    <h2 class="sec-h2">Transparent pricing,<br><em>no surprises</em></h2>
+    <p class="sec-sub">Every plan includes free delivery, assembly, and pickup. No hidden charges, ever.</p>
+  </div>
+  <div class="pgrid2">
+    <div class="price-card reveal">
+      <div class="plan-name">Daily Rental</div>
+      <div class="plan-price"><sup>₹</sup>199<span> /item/day</span></div>
+      <ul class="plan-feats">
+        <li>Minimum 1-day rental</li>
+        <li>Same-day delivery available</li>
+        <li>Free pickup included</li>
+        <li>Ideal for events &amp; shoots</li>
+      </ul>
+      <button class="btn btn-outline btn-full" onclick="go('catalog')">Browse &amp; Rent</button>
+    </div>
+    <div class="price-card feat reveal">
+      <div class="feat-badge">Most Popular</div>
+      <div class="plan-name">Weekly Rental</div>
+      <div class="plan-price"><sup>₹</sup>999<span> /item/week</span></div>
+      <ul class="plan-feats">
+        <li>Save 28% vs daily rate</li>
+        <li>Priority 24h delivery</li>
+        <li>Free pickup + 1 swap</li>
+        <li>Premium maintenance</li>
+        <li>End-of-term reminders</li>
+      </ul>
+      <button class="btn btn-terra btn-full" onclick="go('catalog')">Browse &amp; Rent</button>
+    </div>
+    <div class="price-card reveal">
+      <div class="plan-name">Monthly Rental</div>
+      <div class="plan-price"><sup>₹</sup>2,999<span> /item/month</span></div>
+      <ul class="plan-feats">
+        <li>Save 50% vs daily rate</li>
+        <li>White-glove delivery</li>
+        <li>Free pickup + 2 swaps</li>
+        <li>Full damage waiver</li>
+        <li>Dedicated support agent</li>
+      </ul>
+      <button class="btn btn-outline btn-full" onclick="go('catalog')">Browse &amp; Rent</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ REVIEWS ══════════ -->
+<section class="sec sec-alt" id="reviews">
+  <div class="sec-tag">Reviews</div>
+  <h2 class="sec-h2">Loved by <em>thousands</em></h2>
+  <p class="sec-sub">Real customers, real homes, real transformations.</p>
+  <div class="tgrid">
+    <div class="tcard reveal"><div class="tstars">★★★★★</div><p class="ttext">"Rented a full living room for 3 months. Incredible quality, delivered on time, and the team set everything up perfectly. Couldn't be happier."</p><div class="tauthor"><div class="tav">A</div><div><div class="tname">Ananya Sharma</div><div class="tcity">Mumbai, MH</div></div></div></div>
+    <div class="tcard reveal"><div class="tstars">★★★★★</div><p class="ttext">"Used it for a brand photoshoot — the pieces were stunning and same-day delivery was a lifesaver. Will definitely use again for our next project."</p><div class="tauthor"><div class="tav">R</div><div><div class="tname">Rohan Mehta</div><div class="tcity">Bangalore, KA</div></div></div></div>
+    <div class="tcard reveal"><div class="tstars">★★★★☆</div><p class="ttext">"The monthly plan saves so much vs buying. The reminder notifications are incredibly helpful — I never missed a return date. Highly recommend!"</p><div class="tauthor"><div class="tav">P</div><div><div class="tname">Priya Nair</div><div class="tcity">Kolkata, WB</div></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="f-logo">Fixn<span>Rent</span></div>
+      <p class="f-tagline">Premium furniture rentals bringing designer pieces to your doorstep. Transform any space, anytime, without buying.</p>
+    </div>
+    <div><div class="f-col-h">Collection</div><ul class="f-links"><li><a href="#">Sofas &amp; Seating</a></li><li><a href="#">Tables &amp; Desks</a></li><li><a href="#">Beds &amp; Frames</a></li><li><a href="#">Storage</a></li><li><a href="#">Lighting</a></li></ul></div>
+    <div><div class="f-col-h">Company</div><ul class="f-links"><li><a href="#">About Us</a></li><li><a href="#">How It Works</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li></ul></div>
+    <div><div class="f-col-h">Support</div><ul class="f-links"><li><a href="#">Help Centre</a></li><li><a href="#">Delivery Info</a></li><li><a href="#">Returns Policy</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="f-bottom">
+    <span>© 2025 FixnRent Furniture Rentals. All rights reserved.</span>
+    <span>📞 +91 00000 00000 &nbsp;·&nbsp; hello@fixnrent.in</span>
+  </div>
+</footer>
+
+<!-- ══════════ AUTH MODAL ══════════ -->
+<div class="overlay" id="authOL" onclick="olClick(event,'authOL')">
+  <div class="modal" id="authModal">
+    <button class="modal-x" onclick="closeOL('authOL')">✕</button>
+    <div id="authBody"></div>
+  </div>
+</div>
+
+<!-- ══════════ RENT MODAL ══════════ -->
+<div class="overlay" id="rentOL" onclick="olClick(event,'rentOL')">
+  <div class="modal modal-lg" id="rentModal">
+    <button class="modal-x" onclick="closeOL('rentOL')">✕</button>
+    <div id="rentBody"></div>
+  </div>
+</div>
+
+<!-- ══════════ SIDE PANEL ══════════ -->
+<div class="pback" id="pback" onclick="closePanel()"></div>
+<aside class="panel" id="panel">
+  <div class="panel-hd">
+    <div class="panel-hd-title">My Account</div>
+    <button class="btn btn-ghost btn-sm" onclick="closePanel()">✕ Close</button>
+  </div>
+  <div class="panel-tabs">
+    <button class="ptab on"  id="pt-active"  onclick="swTab('active')">Active Rentals</button>
+    <button class="ptab"     id="pt-history" onclick="swTab('history')">History</button>
+    <button class="ptab"     id="pt-profile" onclick="swTab('profile')">Profile</button>
+  </div>
+  <div class="panel-body">
+    <div id="pc-active"></div>
+    <div id="pc-history" class="hidden"></div>
+    <div id="pc-profile" class="hidden"></div>
+  </div>
+</aside>
+
+<!-- Toast container -->
+<div class="toast-wrap" id="tw"></div>
+
+<!-- JavaScript -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
